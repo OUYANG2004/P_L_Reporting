@@ -200,22 +200,19 @@ for(i in 2:(length(datetine))){
 
 
 
-startday="2018-03-05"
+startday="2018-03-05"         ######The first Report########
 
-endday="2018-10-05"
+endday="2018-10-05"	      ######The last Report########
 
-BM="UKX"
+BM="UKX"                      ######The BenchMark, The benchmark file should be XXX.XLSX#######
 
 
 	
 	
-dir="/Users/ouyangming/Desktop/DU846827"
+dir="/Users/Desktop/DU846827" #######dirrection of the reports#####
 
 setwd(dir)
-
-Pn="DU846827"
-
-BM="UKX"
+Pn="DU846827"		      ########Portfolio NAME######## 
 
 Construct(dir,Pn,startday,endday,BM)
 
