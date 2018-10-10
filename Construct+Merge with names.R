@@ -17,6 +17,18 @@ MERGE <- function(dirb,output){
 			NAME="TECH LO"
 		if(dirb[i,2]=="U9801918")
 			NAME="TECH LO 2"
+		if(dirb[i,2]=="DU846825")
+			NAME="HK L/O"
+		if(dirb[i,2]=="DU846826")
+			NAME="HK L/O-HSI"
+		if(dirb[i,2]=="DU846828")
+			NAME="A-share L/O Beta"
+		if(dirb[i,2]=="DU846829")
+			NAME="A-share L/O Raw"
+	        if(dirb[i,2]=="DU846827")
+        	    	NAME="UK L/O-UKX"
+        	if(dirb[i,2]=="DU878918")
+            		NAME="UK L/O"
 		summary1 = rbind(NAME,summary1)
 		summary = cbind(summary,summary1[,-1])
 	}	
