@@ -1,10 +1,8 @@
-
+###########	for daily rewnew. summary file exist .  ##############
+########### Input direction, Protfolio name, Benchmark and the value of todays bechmark.##########
 
 Renew <- function(dir,Pn,BM,BMI){
 	
-###########	for daily rewnew. summary file exist
-
-
 library(xlsx)
 
 summarypath=paste0(dir,"/summary_",Pn,".csv")
