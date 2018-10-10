@@ -1,6 +1,4 @@
-
-
-
+####specific name
 MERGE <- function(dirb,output){
 	options(stringsAsFactors=FALSE)
 	nop = length(dirb[,1])
