@@ -1,5 +1,6 @@
-Construct <- function(dir,Pn,startday,endday,BM){
 ########for no summary file,  with BM file############
+Construct <- function(dir,Pn,startday,endday,BM){
+	
 library(xlsx)
 datetine=seq(as.Date(startday), as.Date(endday), by='day')
 options(digits=12)
