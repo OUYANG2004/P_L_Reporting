@@ -130,7 +130,12 @@ renewMERGE <- function(dirb,output){
             		NAME="UK L/O"
 		summaryt[,i]=c(NAME,summary1[,coln1])
 	}
-	summary11=as.data.frame(read.csv(paste0(output,"/summarytotal.csv")))
+	if(dirb[i,2]=="U8293808"){
+		summary11=as.data.frame(read.csv(paste0(output,"/summarytotal.csv")))
+	}else{
+		summary11=as.data.frame(read.csv(paste0(output,"/summarytotalpp.csv")))
+
+	}
 	coln2=length(summary11[1,])
 	if(summary11[2,coln2]!=summaryt[2,1]){
 		summary=cbind(summary11,summaryt)
@@ -151,10 +156,13 @@ renewMERGE <- function(dirb,output){
 	setwd(output)
 	if(dirb[i,2]=="U8293808"){
 		write.csv(summary,paste0(output,"/summarytotal.csv"),row.names=F)
-		write.csv(summaryf,paste0(output,"/summarytotal1.csv"),row.names=F)	
+		write.csv(summaryf,paste0(output,"/summarytotal1.csv"),row.names=F)
+		write.csv(cbind(summaryf[,1],summaryf[,(coln2+1):(nop+coln2)]),paste0(output,"/summarytotaltoday.csv"),row.names=F)
+
 	}else{
 		write.csv(summary,paste0(output,"/summarytotalpp.csv"),row.names=F)
 		write.csv(summaryf,paste0(output,"/summarytotalpp1.csv"),row.names=F)
+		write.csv(cbind(summaryf[,1],summaryf[,(coln2+1):(nop+coln2)]),paste0(output,"/summarytotalpptoday.csv"),row.names=F)
 	}
 }
 
